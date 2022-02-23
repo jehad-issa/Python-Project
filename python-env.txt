@@ -1,0 +1,2 @@
+C:\Users\ASUS\OneDrive\Documents\GitHub-AXSOS\Python_stack\my_environments\djangoPy3Env\Scripts\activate
+
