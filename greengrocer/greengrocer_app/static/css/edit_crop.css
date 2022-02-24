@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    
+    background-image: url('../imgs/edit.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body::before
+{
+    content: "       ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+    
+}
+.custom-select{
+    width:80px;
+}
+.navbar{
+    background-color:rgb(0, 134, 0);
+}
+.navbar *{
+    color:white;
+}
+.navbar .new1{
+    margin-left: 330px;
+}
+.navbar .new3{
+    margin-right: 330px;
+}
+.navbar *:hover{
+    color:rgb(148, 148, 148)
+
+}
+h1{
+    color: white;
+    margin: 30px auto;
+    width: 1000px;
+    height: 100px;
+    position: relative;
+    font-size: 50px;
+    animation: title 4s;
+}
+label{
+    color: white;
+}
+.content{
+    width: 1000px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    animation: text 4s;
+}
+@keyframes text{
+    0%{bottom: 1300px;} 
+    100%{bottom:0px}
+}
+@keyframes title{
+    0%{bottom: 1100px;} 
+    100%{bottom:0px}
+}
+.col-md-3{
+    width: 350px;
+}
+button{
+    margin-top: 20px;
+}

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.custom-select{
+    width:80px;
+}
+.navbar{
+    background-color:rgb(0, 134, 0);
+}
+.navbar *{
+    color:white;
+}
+.navbar .new1{
+    margin-left: 330px;
+}
+.navbar .new3{
+    margin-right: 330px;
+}
+.navbar *:hover{
+    color:rgb(148, 148, 148)
+
+}
+body{
+    
+    background-image: url('../imgs/farmer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body::before
+{
+    content: "       ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+    
+}
+
+h1{
+    
+    width: 450px ;
+    font-size: 50px;
+}
+p{
+    width: 400px;
+    font-size: 20px;
+}
+.content{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 200px;
+    position: relative;
+    margin: 50px auto;
+    justify-content: space-between;
+    animation: text 10s;
+    
+}
+@keyframes text{
+    0%{left: 1500px;} 
+    /* 25%{left:100px}
+    50%{left:75px}
+    75%{left:40px} */
+    100%{left:0px}
+}
+details{
+    color: white;
+}
