@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap');
+*{
+    font-family: 'Work Sans', sans-serif;
+    font-size:18pt;
+    font-weight:bold;
+}
+body{
+    background-image: url(../img/background_trader.jpg);
+    background-size: cover;
+}
+body::before
+{
+    content: "  ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    
+}
+/*LEFT SECTION*/
+#container{
+    display:flex;
+    margin:30px 50px;
+    border:solid 2px white;
+    border-radius: 20px;
+    box-shadow: 2px 2px gray;
+    padding:15px;
+    
+}
+#container::before{
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: black;
+    left: 50px;
+    top:118px;
+    opacity: 0.4;
+    border-radius: 20px;
+    width: 94%;
+    height: 67.2%;
+    z-index: -1;
+}
+#container section{
+    flex:4;
+    display:flex;
+}
+#container section .details{
+    flex:1.5;
+    padding-right: 30px;
+}
+#container section .details *{
+    color:white;
+    font-weight: bold;
+}
+#container section .details .green{
+    color:rgb(16, 221, 16);
+    font-size:20pt
+}
+#container section form {
+    flex:1;
+    margin-right: 160px;
+    margin-top: 10%;
+}
+#container section form button{
+    width:160px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+#container section form .p-one{
+    color:whitesmoke
+}
+#container section form .p-two{
+    color:red;
+    font-size: 10pt;
+}
+#container img{
+    flex:0.5;
+    width:200px;
+    margin-left: 50px;
+}
+/*RIGHT SECTION (IMG)*/

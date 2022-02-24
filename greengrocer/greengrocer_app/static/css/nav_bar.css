@@ -1,0 +1,22 @@
+
+/*NAV BAR*/
+
+.custom-select{
+    width:80px;
+}
+.navbar{
+    background-color:rgb(0, 134, 0);
+}
+.navbar *{
+    color:white;
+}
+.navbar .new1{
+    margin-left: 330px;
+}
+.navbar .new3{
+    margin-right: 330px;
+}
+.navbar *:hover{
+    color:rgb(148, 148, 148)
+
+}

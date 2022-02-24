@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap');
+*{
+    font-family: 'Work Sans', sans-serif;
+    font-size:18pt;
+    font-weight:bold;
+    color:white;
+}
+body{
+    background-image: url(../img/background_trader.jpg);
+    background-size: cover;
+}
+body::before
+{
+    content: "  ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    
+}
+/*SVG PIC*/
+img{
+    animation: 1s ease-out 0s 1 slideInFromLeft;  
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+/*section*/
+.section{
+    display: flex;
+}
+#top{
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 100px;
+}
+#top .para{
+    margin-right: 200px;
+    margin-top: 50px;
+}
+#top input{
+    padding: 5px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    color:black;
+    height:50px;
+    width:400px;
+}
+
+/*information table */
+.section .table{
+    flex:3;
+    margin:10px 80px;
+}
+/*image */
+.section img{
+    width:200px;
+    flex:1;
+    position: relative;
+    bottom: 110px;
+
+}
