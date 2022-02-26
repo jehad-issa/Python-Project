@@ -1,5 +1,4 @@
 from tkinter import CASCADE
-from urllib import request
 from django.db import models
 
 class Farmer(models.Model):
@@ -30,8 +29,12 @@ class Crop(models.Model):
     desc=models.TextField()
     farmer=models.ForeignKey(Farmer,related_name='crops',on_delete=CASCADE)
     traders=models.ManyToManyField(Trader,through='Sale')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class Sale(models.Model):
     crop=models.ForeignKey(Crop,on_delete=CASCADE)
     trader=models.ForeignKey(Trader,on_delete=CASCADE)
     quantity=models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
