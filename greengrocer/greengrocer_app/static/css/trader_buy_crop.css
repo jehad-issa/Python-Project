@@ -5,7 +5,7 @@
     font-weight:bold;
 }
 body{
-    background-image: url(../img/background_trader.jpg);
+    background-image: url('../imgs/background_trader.jpg');
     background-size: cover;
 }
 body::before
@@ -67,8 +67,8 @@ body::before
     margin-top: 10%;
 }
 #container section form button{
-    width:160px;
-    margin-left: 100px;
+    width:240px;
+    margin-left: 60px;
     margin-top: 5px;
 }
 #container section form .p-one{
