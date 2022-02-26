@@ -18,4 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('', include('greengrocer_app.urls')),
+    path('', include('login_app.urls')),
+
 ]
