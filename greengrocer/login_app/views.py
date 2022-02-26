@@ -26,11 +26,8 @@ def register(request):
                 first_name=request.POST['first_name'],
                 last_name=request.POST['last_name'],
                 email=request.POST['email'],
-                phone_num=request.POST['phone_num'],
+                phone_number=request.POST['phone_number'],
                 password=pw_hash)
-                # messages.success(request, "User successfully create")
-                # if 'first_name' not in request.session:
-                #     request.session['first_name']=request.POST['first_name']
                 return redirect('/home')
 
     elif request.POST['user_type'] =='trader': 
@@ -47,11 +44,8 @@ def register(request):
             first_name=request.POST['first_name'],
             last_name=request.POST['last_name'],
             email=request.POST['email'],
-            phone_num=request.POST['phone_num'],
+            phone_number=request.POST['phone_number'],
             password=pw_hash)
-            # messages.success(request, "User successfully create")
-            # if 'first_name' not in request.session:
-            #     request.session['first_name']=request.POST['first_name']
             return redirect('/home')    
 
 
