@@ -57,7 +57,7 @@ h1{
 label{
     color: white;
 }
-.content{
+form {
     width: 1000px;
     height: 200px;
     position: relative;

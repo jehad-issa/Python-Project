@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/nav_bar.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/trader_buy_crop.css' %}"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Buy Crop</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand new1" href="#"><i class="fa fa-home"></i>        Home</a>
+        <a class="navbar-brand new2" href="#"><i class="fa fa-list"></i>     Purchases</a>
+        <a class="navbar-brand new3" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>   Logout</a>
+    </nav>
+    <div id="container">
+        <section>
+            <div class="details">
+                <p>Crop Name : Tomato</p>  
+                <p>Farmer Name : khaled</p>
+                <p>Price : 55$</p>
+                <p>Quantity : 570kg</p>
+                <p>Quality : B</p>
+                <p class="green">Phone Number : 0595742784</p>
+                <p class="green">Description: the crop will be harvested in five days</p>
+            </div>
+            <form action="" method="post">
+                <p class="p-one">Insert the quantity you want : </p>                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Insert here" >
+                    <span class="input-group-text">KG</span>
+                </div>
+                <button type="submit" class="btn btn-success">Add to Purchases</button>                
+            </form>
+        </section>
+        <img src="{% static 'imgs/contact.svg' %}" alt="illustrations contact">
+    </div>
+</body>
+</html>
