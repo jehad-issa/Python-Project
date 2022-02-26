@@ -70,14 +70,14 @@ class Crop(models.Model):
     quality=models.CharField(max_length=3)
     price=models.FloatField()
     desc=models.TextField()
-    farmer=models.ForeignKey(Farmer,related_name='crops',on_delete=CASCADE)
+    farmer=models.ForeignKey(Farmer,related_name='crops',on_delete=models.CASCADE)
     traders=models.ManyToManyField(Trader,through='Sale')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 class Sale(models.Model):
-    crop=models.ForeignKey(Crop,on_delete=CASCADE)
-    trader=models.ForeignKey(Trader,on_delete=CASCADE)
+    crop=models.ForeignKey(Crop,on_delete=models.CASCADE)
+    trader=models.ForeignKey(Trader,on_delete=models.CASCADE)
     quantity=models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

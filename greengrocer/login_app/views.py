@@ -28,7 +28,7 @@ def register(request):
                 email=request.POST['email'],
                 phone_number=request.POST['phone_number'],
                 password=pw_hash)
-                return redirect('/home')
+                return redirect('/farmer')
 
     elif request.POST['user_type'] =='trader': 
         errors = Trader.objects.register_validator(request.POST)
@@ -46,7 +46,7 @@ def register(request):
             email=request.POST['email'],
             phone_number=request.POST['phone_number'],
             password=pw_hash)
-            return redirect('/home')    
+            return redirect('/trader')    
 
 
 def login_proccese(request):
@@ -69,7 +69,7 @@ def login_proccese(request):
                 if 'first_name' not in request.session:
                     request.session['first_name']=farmer[0].first_name
                     print(request.session['first_name'])
-        return redirect('/home')
+        return redirect('/farmer')
     elif Trader.objects.filter(email=request.POST['email']):
         errors = Trader.objects.login_validator(request.POST)
         if len(errors) > 0:
@@ -89,7 +89,7 @@ def login_proccese(request):
                 if 'first_name' not in request.session:
                     request.session['first_name']=farmer[0].first_name
                     print(request.session['first_name'])
-        return redirect('/home')
+        return redirect('/trader')
     else:
         messages.error(request,"invalid email")
         return redirect('/login')   
