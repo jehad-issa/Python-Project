@@ -1,0 +1,92 @@
+.container{
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+.register{
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+select{
+    position: relative;
+    right: 15px;
+    width: 90px;
+}
+.register_btn,.loin_btn{
+    width: 100px;
+    height: 40px;
+    box-shadow: 3px 5px black;
+    border-radius: 15%;
+    background-color: #008600;
+    cursor: pointer;
+    color: white;
+}
+.register_btn:hover{
+    background-color: #004d00;
+}
+.loin_btn:hover{
+    background-color: #004d00;
+
+}
+.password{
+    position: relative;
+    left: 16px;
+}
+.login{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+body{
+    background-image: url('../img/background2.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    }
+body::before
+{
+    content: "       ";
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+    
+}
+.email{
+    position: relative;
+    left: 15px;
+}
+
+.row input{
+    padding: 5px;
+    border: 1px black solid;
+    border-radius: 15px;
+}
+.row input:hover{
+    border: #008600 solid 3px;
+}
+.row select{
+    width: 160px;
+    margin-left: 100px;
+
+}
+

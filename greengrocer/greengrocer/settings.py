@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'login_app',
     'greengrocer_app',
     'login_app',
     'django.contrib.admin',
