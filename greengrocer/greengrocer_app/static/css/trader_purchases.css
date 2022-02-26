@@ -6,7 +6,7 @@
     color:white;
 }
 body{
-    background-image: url(../img/background_trader.jpg);
+    background-image: url(../imgs/background_trader.jpg);
     background-size: cover;
 }
 body::before

@@ -10,28 +10,27 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/add_crop.css' %}">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css%22%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <nav class="navbar">
         <a class="navbar-brand new1" href="#"><i class="fa fa-home"></i> Home</a>
-        <a class="navbar-brand new2" href="#"><i class="fa fa-list"></i> Add Crop</a>
-        <a class="navbar-brand new2" href="#"><i class="fa fa-list"></i> Edit Crop</a>
+        <a class="navbar-brand new2" href="#"><i class="fa fa-plus"></i> Add Crop</a>
         <a class="navbar-brand new3" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
     </nav>
     <h1>Welcome farmer name! please enter your crop details </h1>
     <div class="content">
         <div class="col-md-3">
             <label for="validationCustom01" class="form-label">Crop name</label>
-            <input type="text" class="form-control" id="validationCustom01" value="crop" name="crop" required>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="crop" name="crop" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="col-md-3">
                 <label for="validationCustom02" class="form-label">Quantity</label>
-                <input type="text" class="form-control" id="validationCustom02" value="0Kg" name="quality" required>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="0Kg" name="quality" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -39,7 +38,7 @@
             <div class="col-md-3">
                 <label for="validationCustomUsername" class="form-label">Price</label>
                 <div class="input-group has-validation">
-                    <input type="text" value="0$" name="price" class="form-control" id="validationCustomUsername"
+                    <input type="text" placeholder="0$" name="price" class="form-control" id="validationCustomUsername"
                         aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                         Please choose a username.
@@ -50,7 +49,7 @@
         <div>
             <div class="col-md-3">
                 <label for="validationCustom03" class="form-label">Quality</label>
-                <input type="text" name="quality" value="A,B,C,..." class="form-control" id="validationCustom03"
+                <input type="text" name="quality" placeholder="A,B,C,..." class="form-control" id="validationCustom03"
                     required>
                 <div class="invalid-feedback">
                     Please provide a valid city.

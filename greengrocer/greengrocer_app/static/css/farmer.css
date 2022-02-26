@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap');
+
 *{
+    font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -64,6 +67,12 @@ p{
     animation: text 10s;
     
 }
+.details{
+    margin:0 50px;
+}
+.details summary{
+    font-size: 25pt;
+}
 @keyframes text{
     0%{left: 1500px;} 
     /* 25%{left:100px}
@@ -73,4 +82,10 @@ p{
 }
 details{
     color: white;
+}
+.action a{
+    color :green;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:18pt;
 }
