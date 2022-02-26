@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from tkinter import CASCADE
 from django.db import models
 import re
@@ -21,7 +22,7 @@ class UserManager(models.Manager):
             errors['exsistance']="this email already exisit"
 
         if len(postData['phone_number']) < 14:
-            errors["last_name"] = "User phone-number should be start with(00972)"
+            errors["phone_number"] = "User phone-number should be start with(00972)"
         if postData['password'] != postData['conf_password']:
             errors['matching_pass'] = "the given password do not match"      
         if len(postData['password']) < 6:
@@ -48,6 +49,7 @@ class Trader(models.Model):
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     phone_number= models.CharField(max_length=255)
+    city = models.CharField(max_length=100,default=NULL)
     password = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -58,6 +60,7 @@ class Farmer(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
+    phone_number= models.CharField(max_length=255,default=NULL)
     city = models.CharField(max_length=100)
     password = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
