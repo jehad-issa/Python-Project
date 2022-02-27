@@ -11,9 +11,9 @@ def login_page(request):
     return render(request,"login.html")    
 
 def register(request):
+    request.session['coming_from']='REGISTER'
     if request.POST['user_type'] =='farmer': 
         errors = Farmer.objects.register_validator(request.POST)
-        request.session['coming_from']='REGISTER'
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
@@ -52,8 +52,8 @@ def register(request):
 
 
 def login_proccese(request):
+    request.session['coming_from']='LOGIN'
     if Farmer.objects.filter(email=request.POST['email']):
-        request.session['coming_from']='LOGIN'
         errors = Farmer.objects.login_validator(request.POST)
         farmer = Farmer.objects.filter(email=request.POST['email'])
         if len(errors) > 0:
