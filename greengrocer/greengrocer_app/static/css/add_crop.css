@@ -80,3 +80,7 @@ form {
 button{
     margin-top: 20px;
 }
+.messages{
+    color:white;
+    font-size:15pt;
+}

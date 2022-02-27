@@ -22,6 +22,13 @@
             Logout</a>
     </nav>
     <h1>Would you like to edit in your crop details! </h1>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     <form action="/edit_new_crop/{{ this_crop.id}}" method="post">
         {% csrf_token %}
         <div>
@@ -67,7 +74,6 @@
                         id="floatingTextarea"></textarea>
                 </div>
             </div>
-
             <div class="col-md-3">
                 <button class="btn btn-primary" type="submit">Edit Crop</button>
             </div>

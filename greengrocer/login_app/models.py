@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from distutils import errors
 from tkinter import CASCADE
 from django.db import models
 import re
@@ -9,7 +10,7 @@ class UserManager(models.Manager):
     def register_validator(self, postData):
         errors = {}
         if len(postData['first_name']) < 3:
-            errors["first_name"] = "User first-nmae should be at least 3 characters"
+            errors["first_name"] = "User first-name should be at least 3 characters"
         if len(postData['last_name']) < 3:
             errors["last_name"] = "User last-name should be at least 3 characters"
 
@@ -39,6 +40,20 @@ class UserManager(models.Manager):
             errors['email'] = "Invalid email address!"
         if len(postData['password']) < 6:
             errors["password"] = "User password not correct"    
+        return errors
+
+    def add_crop_validator(self,postData):
+        errors={}
+        if len(postData['crop']) < 3:
+            errors["crop"] = "Crop name  should be at least 3 characters"
+        if len(postData['quantity']) < 1:
+            errors["quantity"] = "quantity  should be at least 1 characters"
+        if len(postData['price']) < 1:
+            errors["price"] = "price  should be at least 1 characters"
+        if len(postData['quality']) < 1:
+            errors["quality"] = "quality  should be at least 1 characters"
+        if len( postData['desc']) < 5:
+            errors["desc"] = "description should be at least 5 characters"
         return errors
 
 
@@ -77,10 +92,13 @@ class Crop(models.Model):
     traders=models.ManyToManyField(Trader,through='Sale')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    objects=UserManager()
+
 
 class Sale(models.Model):
-    crop=models.ForeignKey(Crop,on_delete=models.CASCADE)
-    trader=models.ForeignKey(Trader,on_delete=models.CASCADE)
+    crop=models.ForeignKey(Crop,related_name='sales',on_delete=models.CASCADE)
+    trader=models.ForeignKey(Trader,related_name='sales',on_delete=models.CASCADE)
+    farmer=models.ForeignKey(Farmer,related_name='sales',on_delete=models.CASCADE)
     quantity=models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
