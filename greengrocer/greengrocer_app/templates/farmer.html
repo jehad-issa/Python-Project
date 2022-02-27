@@ -43,7 +43,13 @@
                 <td>{{ crop.quantity }}</td>
                 <td>{{ crop.price }}</td>
                 <td>{{ crop.quality }}</td>
-                <td>5 Kg</td>
+                {%if crop.sales.all %}
+                {%for sale in crop.sales.all%}
+                <td>{{ sale.quantity }} KG</td>
+                {% endfor %}
+                  {% else %}
+                  <td>0 KG</td>
+                {% endif %}
                 <td class="action"><a href="/delete/{{ crop.id}}">Delete</a>  | <a href="http://127.0.0.1:8000/farmer/edit_crop/{{crop.id}}">Edit</a></td>
               </tr>
               {% endfor %}

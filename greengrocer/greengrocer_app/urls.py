@@ -10,7 +10,8 @@ urlpatterns = [
     path('edit_new_crop/<num>',views.new_edit_crop),
     path('delete/<num>',views.delete),
     path('trader', views.trader),
-    path('trader/buy', views.trader_buy_crop),
+    path('trader/<int:crop_id>', views.trader_buy_crop),
+    path('trader/<int:crop_id>/buy', views.buy),
     path('trader/purchases', views.purchases),
     
 ]

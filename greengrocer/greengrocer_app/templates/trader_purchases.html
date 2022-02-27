@@ -13,9 +13,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <a class="navbar-brand new1" href="#"><i class="fa fa-home"></i>        Home</a>
-        <a class="navbar-brand new2" href="#"><i class="fa fa-list"></i>     Purchases</a>
-        <a class="navbar-brand new3" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>   Logout</a>
+        <a class="navbar-brand new1" href="/trader"><i class="fa fa-home"></i>        Home</a>
+        <a class="navbar-brand new2" href="/trader/purchases"><i class="fa fa-list"></i>     Purchases</a>
+        <a class="navbar-brand new3" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>   Logout</a>
     </nav>
     <div id="top">
         <p class="para">All Crops purchased :- </p>
@@ -29,34 +29,16 @@
                     <th scope="col">Quality</th>
                     <th scope="col">Phone Number</th>
                 </tr>
+                {%for sale in sales%}
+                
                 <tr>
-                    <td>Oday</td>
-                    <td>Tomato</td>
-                    <td>500Kg</td>
-                    <td>B</td>
-                    <td>059544812355</td>
+                    <td>{{sale.crop.farmer.first_name}}   {{sale.crop.farmer.last_name}}</td>
+                    <td>{{sale.crop.crop_name}}</td>
+                    <td>{{sale.quantity}}</td>
+                    <td>{{sale.crop.quality}}</td>
+                    <td>{{sale.crop.farmer.phone_number}}</td>
                 </tr>
-                <tr>
-                    <td>Ahmad</td>
-                    <td>Tomato</td>
-                    <td>500Kg</td>
-                    <td>B</td>
-                    <td>059544812355</td>
-                </tr>
-                <tr>
-                    <td>Maher</td>
-                    <td>Tomato</td>
-                    <td>500Kg</td>
-                    <td>B</td>
-                    <td>059544812355</td>
-                </tr>
-                <tr>
-                    <td>Jihad</td>
-                    <td>Tomato</td>
-                    <td>500Kg</td>
-                    <td>B</td>
-                    <td>059544812355</td>
-                </tr>
+                {%endfor%}
         </table>
         <img class="animated" src="{% static 'imgs/info.svg' %}" alt="">
     </section>

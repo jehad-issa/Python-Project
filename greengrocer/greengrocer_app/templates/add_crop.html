@@ -23,57 +23,63 @@
             Logout</a>
     </nav>
     <h1>Welcome {{this_farmer.first_name}} {{this_farmer.last_name}}! please enter your crop details </h1>
-        <form action="/new_crop" method="post">
-            {% csrf_token %}
-            <div>
-                <div class="col-md-3">
-                    <label for="validationCustom01" class="form-label">Crop name</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="crop" name="crop"
-                        required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="validationCustom02" class="form-label">Quantity</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="0Kg" name="quantity"
-                        required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="validationCustomUsername" class="form-label">Price</label>
-                    <div class="input-group has-validation">
-                        <input type="text" placeholder="0$" name="price" class="form-control"
-                            id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            Please choose a username.
-                        </div>
-                    </div>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form action="/new_crop" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="col-md-3">
+                <label for="validationCustom01" class="form-label">Crop name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="crop" name="crop" required>
+                <div class="valid-feedback">
+                    Looks good!
                 </div>
             </div>
-            <div>
-                <div class="col-md-3">
-                    <label for="validationCustom03" class="form-label">Quality</label>
-                    <input type="text" name="quality" placeholder="A,B,C,..." class="form-control"
-                        id="validationCustom03" required>
+            <div class="col-md-3">
+                <label for="validationCustom02" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="0Kg" name="quantity"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustomUsername" class="form-label">Price</label>
+                <div class="input-group has-validation">
+                    <input type="text" placeholder="0$" name="price" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
-                        Please provide a valid city.
+                        Please choose a username.
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="validationCustom04" class="form-label">Description</label>
-                    <div class="form-floating">
-                        <textarea class="form-control" name="desc" placeholder="Leave a comment here"
-                            id="floatingTextarea"></textarea>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <button class="btn btn-primary" type="submit">Add to Crops</button>
                 </div>
             </div>
-        </form>
+        </div>
+        <div>
+            <div class="col-md-3">
+                <label for="validationCustom03" class="form-label">Quality</label>
+                <input type="text" name="quality" placeholder="A,B,C,..." class="form-control" id="validationCustom03"
+                    required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Description</label>
+                <div class="form-floating">
+                    <textarea class="form-control" name="desc" placeholder="Leave a comment here"
+                        id="floatingTextarea"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" type="submit">Add to Crops</button>
+            </div>
+        </div>
+    </form>
 </body>
 
 </html>

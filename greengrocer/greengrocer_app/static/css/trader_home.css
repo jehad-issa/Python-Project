@@ -4,6 +4,11 @@
     font-size:18pt;
     font-weight:bold;
 }
+/*WELCOME HEADER*/
+.welcome{
+    font-size:22pt;
+    margin:20px 100px
+}
 /*ASIDE SELECT*/
 #container{
     display:flex;
@@ -12,6 +17,9 @@
 #container aside{
     flex:1;
     margin-right: 50px;
+}
+#container aside p{
+    font-size:13pt;
 }
 
 /*Section*/
