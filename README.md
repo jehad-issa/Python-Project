@@ -21,18 +21,18 @@ information to connect to the admin and login and registration process.
 2. When the user enter as trader he will redirect the traders page , and when the user enter as a 
 farmer he will redirect to the farmers page.
 
-    *farmer will be able to :
+    farmer will be able to :
       * Add a Crop : the farmer can add crop be clicking in add crop button in the nav bar ,then he will redirict to the add crop page and enter the details
       for the crop ,also this detalis will be showen in the home page for the farmer 
       * Home page : In this page the farmer can see his own crops and the quantity saled ,also he can make an edit or delete in his crops  
       * Edit crop : the farmer can edit his own crop by clickung the edit button in the table that display all the crops 
       
-    *trader will be able to:
+    trader will be able to :
        * Home page : dispaly all added Crops from farmers  and trader can search for specific crop. 
         The contact with farmer will be by phone number (in each crop there is a contact field ).   
        * contact farmer : as we said the phone number will be the contact tool .
         so when trader click in contact field trader will have the phone number for farmer and description of the crop .
-        And trader can click on buy button to add this crop for his purchases
+         And trader can click on buy button to add this crop for his purchases
        * Purchases crops : This page have a table of names of crops that trader buy and information about them.
        
  ## Tools :
