@@ -15,7 +15,7 @@ site and the farmer will display his crops and traders will be able to connect w
 
 
 ## Requirement :
-1. We will create a home page that display the purpose of this web site and will contain the 
+1. We will create a home page that  display the purpose of this web site and will contain the 
 information to connect to the admin and login and registration process.
 
 2. When the user enter as trader he will redirect the traders page , and when the user enter as a 
