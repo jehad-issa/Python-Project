@@ -27,7 +27,7 @@ farmer he will redirect to the farmers page.
       * Home page : In this page the farmer can see his own crops and the quantity saled ,also he can make an edit or delete in his crops  
       * Edit crop : the farmer can edit his own crop by clickung the edit button in the table that display all the crops .
       
-    trader will be able to :
+trader will be able to .
        * Home page : dispaly all added Crops from farmers  and trader can search for specific crop. 
         The contact with farmer will be by phone number (in each crop there is a contact field )  
        * contact farmer : as we said the phone number will be the contact tool. 
