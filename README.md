@@ -42,3 +42,9 @@ farmer he will redirect to the farmers page.
  4. Django
  5. Bootstrap
  6. font awesome
+ ## images of the site
+![alt text](https://github.com/jehad-issa/Python-Project/blob/oday/1.png?raw=true)
+
+
+
+
