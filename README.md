@@ -29,7 +29,7 @@ farmer he will redirect to the farmers page.
       
 4. trader will be able to :<br />
        * Home page : dispaly all added crops from farmers  and trader can search for specific crop. 
-        The contact with farmer will be by phone number (in each crop there is a contact field )  
+        The contact with farmer will be by phone  number (in each crop there is a contact field )  
        * contact farmer : as we said the phone number will be the contact tool. 
         so when trader click in contact field trader will have the phone number for farmer and description of the crop 
          And trader can click on buy button to add this crop for his purchases<br />
