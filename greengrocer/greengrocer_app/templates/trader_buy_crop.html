@@ -26,6 +26,7 @@
                 <p>Quantity : {{this_crop.quantity}}kg</p>
                 <p>Quality : {{this_crop.quality}}</p>
                 <p class="green">Phone Number : {{this_crop.farmer.phone_number}}</p>
+                <p class="green">City : {{this_crop.farmer.city}}</p>
                 <p class="green">Description: {{this_crop.desc}}</p>
             </div>
             <form action="/trader/{{this_crop.id}}/buy" method="post">
