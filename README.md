@@ -43,7 +43,7 @@ farmer he will redirect to the farmers page.
  5. Bootstrap
  6. font awesome
  ## images of the site
-![alt text](https://github.com/jehad-issa/Python-Project/blob/oday/1.png?raw=true)
+![alt text](https://github.com/jehad-issa/Python-Project/tree/main/greengrocer/imgs%20of%20the%20site/1.png)
 
 
 
