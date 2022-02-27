@@ -28,7 +28,7 @@ farmer he will redirect to the farmers page.
       * Edit crop : the farmer can edit his own crop by clickung the edit button in the table that display all the crops.
       
 4. trader will be able to :<br />
-       * Home page : dispaly all added Crops from farmers  and trader can search for specific crop. 
+       * Home page : dispaly all added crops from farmers  and trader can search for specific crop. 
         The contact with farmer will be by phone number (in each crop there is a contact field )  
        * contact farmer : as we said the phone number will be the contact tool. 
         so when trader click in contact field trader will have the phone number for farmer and description of the crop 
