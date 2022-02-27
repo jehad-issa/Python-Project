@@ -43,9 +43,9 @@ farmer he will redirect to the farmers page.
  5. Bootstrap
  6. font awesome
  ## images of the site
-<img src="/img/maher.png">
-
-
+![Trader home](imgs/1.png)
+![Login](imgs/2.png)
+![Farmer home](imgs/3.png)
 
 
 
